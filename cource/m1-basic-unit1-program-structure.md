@@ -5,7 +5,7 @@ _Last updated: 02.03.2024_
 
 The entry point of a Kotlin program is the `main` function. This is where the execution of a Kotlin program begins, so every Kotlin program must have this function.
 
-For example, in the previous topic, the following `main` function was defined:
+For example, the following `main` function was defined:
 
 ```kotlin
 fun main() {

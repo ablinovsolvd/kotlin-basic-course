@@ -9,7 +9,7 @@ For example, the following `main` function was defined:
 
 ```kotlin
 fun main() {
-    println("Hello METANIT.COM")
+    println("Hello Kotlin")
 }
 ```
 
@@ -23,7 +23,7 @@ It is worth noting that prior to version 1.3, the `main` function in Kotlin had 
 
 ```kotlin
 fun main(args: Array<String>) {
-    println("Hello METANIT.COM")
+    println("Hello Kotlin")
 }
 ```
 
@@ -36,17 +36,17 @@ Starting with version 1.3, it is no longer mandatory to define the `main` functi
 The fundamental building block of a Kotlin program is the statement. Each statement performs a specific action, such as calling functions, declaring variables, or assigning values. For example:
 
 ```kotlin
-println("Hello METANIT.COM!");
+println("Hello Kotlin!");
 ```
 
-This line calls the built-in `println()` function, which prints a message (in this case, the string `"Hello METANIT.COM!"`) to the console.
+This line calls the built-in `println()` function, which prints a message (in this case, the string `"Hello Kotlin!"`) to the console.
 
 Unlike some other similar programming languages, such as Java, it is not necessary to put a semicolon at the end of each statement in Kotlin. Each statement can simply be placed on a new line:
 
 ```kotlin
 fun main() {
-    println("Kotlin on Metanit.com")
-    println("Hello METANIT.COM")
+    println("Kotlin courses")
+    println("Hello Kotlin!")
     println("Kotlin is a fun")
 }
 ```
@@ -55,7 +55,7 @@ However, if you place multiple statements on a single line, you need to separate
 
 ```kotlin
 fun main() {
-    println("Kotlin on Metanit.com"); println("Hello Kotlin"); println("Kotlin is a fun")
+    println("Kotlin courses"); println("Hello Kotlin!"); println("Kotlin is a fun")
 }
 ```
 
@@ -72,6 +72,6 @@ Kotlin supports two types of comments: single-line and multi-line. A single-line
     the entry point of the program
 */
 fun main() {         // start of the main function
-    println("Hello METANIT.COM") // print a line to the console
+    println("Hello Kotlin!") // print a line to the console
 }                   // end of the main function
 ```

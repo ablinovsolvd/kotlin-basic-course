@@ -134,21 +134,71 @@ val city = "London" // Kotlin knows this is a String
 
 ## Basic Operators
 
-Kotlin supports common operators:
+Kotlin supports these main operators:
 
-- **Arithmetic:** `+`, `-`, `*`, `/`, `%`
-- **Assignment:** `=`, `+=`, `-=`, `*=`, `/=`, `%=`
-- **Comparison:** `==`, `!=`, `>`, `<`, `>=`, `<=`
-- **Logical:** `&&`, `||`, `!`
-- **Increment/Decrement:** `++`, `--`
+### Arithmetic Operators
 
-**Example:**
+- `+` Addition: `val sum = 2 + 3` // 5
+- `-` Subtraction: `val diff = 5 - 2` // 3
+- `*` Multiplication: `val product = 4 * 2` // 8
+- `/` Division: `val quotient = 10 / 2` // 5
+- `%` Remainder: `val remainder = 7 % 3` // 1
+
+### Assignment Operators
+
+- `=` Assign: `var score = 10`
+- `+=` Add and assign: `score += 5` // 15
+- `-=` Subtract and assign: `score -= 3` // 12
+- `*=` Multiply and assign: `score *= 2` // 24
+- `/=` Divide and assign: `score /= 4` // 6
+- `%=` Remainder and assign: `score %= 4` // 2
+
+### Comparison Operators
+
+- `==` Equal: `a == b`
+- `!=` Not equal: `a != b`
+- `>` Greater: `a > b`
+- `<` Less: `a < b`
+- `>=` Greater or equal: `a >= b`
+- `<=` Less or equal: `a <= b`
+
+### Logical Operators
+
+- `&&` And: `condition1 && condition2`
+- `||` Or: `condition1 || condition2`
+- `!` Not: `!condition`
+
+### Increment/Decrement
+
+- `++` Increase by one: `count++`
+- `--` Decrease by one: `count--`
+
+**Examples:**
 
 ```kotlin
 val a = 10
 val b = 5
-val sum = a + b // 15
-val isGreater = a > b // true
+val sum = a + b         // 15
+val diff = a - b        // 5
+val product = a * b     // 50
+val quotient = a / b    // 2
+val remainder = a % b   // 0
+
+var score = 10
+score += 5              // 15
+score -= 3              // 12
+
+val isGreater = a > b   // true
+val isEqual = a == b    // false
+
+var count = 1
+count++                 // 2
+count--                 // 1
+
+val isAdult = true
+val hasTicket = false
+val canEnter = isAdult && hasTicket  // false
+val notAllowed = !canEnter           // true
 ```
 
 ---

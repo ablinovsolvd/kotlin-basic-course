@@ -1,76 +1,157 @@
-# Program Structure
+# Program Structure and Basic Syntax
 
-## The `main` Function
+## Installing the Java Development Kit (JDK)
 
-The entry point of a Kotlin program is the `main` function. This is where the execution of a Kotlin program begins, so every Kotlin program must have this function.
+Kotlin runs on the Java Virtual Machine (JVM). To use Kotlin, you need to install the Java Development Kit (JDK).  
+You can download the JDK from Oracle’s official website or from providers like OpenJDK.  
+After installation, it’s helpful to set the `JAVA_HOME` environment variable to point to your JDK folder.
 
-For example, the following `main` function was defined:
+## Setting up IntelliJ IDEA
+
+The most popular environment for Kotlin is IntelliJ IDEA, made by JetBrains.  
+You can download the free Community Edition from JetBrains’ website.  
+The Kotlin plugin is included and enabled by default.
+
+To create a new Kotlin project in IntelliJ IDEA:
+1. Open IntelliJ IDEA and click “New Project”.
+2. Select “Kotlin” on the left.
+3. Name your project and choose a location.
+4. Choose a build system (IntelliJ or Gradle).
+5. Select the JDK you installed.
+
+## Writing and Running Your First "Hello, World!" Program
+
+Once your project is ready, you can write your first Kotlin program.
+
+1. In your project, create a new Kotlin file (for example, `HelloWorld.kt`).
+2. Add the following code:
 
 ```kotlin
 fun main() {
-    println("Hello Kotlin")
+    println("Hello, World!")
 }
 ```
 
-The definition of the `main()` function (as well as other functions in Kotlin) starts with the keyword `fun`. This keyword indicates that a function is being defined. After `fun`, the name of the function is specified; in this case, it's `main`.
+The `main` function is where every Kotlin program starts.  
+To run the program, click the green play button next to the `main` function.  
+You will see “Hello, World!” printed at the bottom of your screen.
 
-Following the function name, there are parentheses containing the function's parameters. Here, the `main` function does not take any parameters, so the parentheses are empty.
+## Structure of a Kotlin Program
 
-All actions that the function performs are enclosed in curly braces. In this example, the only thing the `main` function does is print a message to the console using the built-in `println()` function.
+The entry point for every Kotlin program is the `main` function.  
+Here's a simple example:
 
-It is worth noting that prior to version 1.3, the `main` function in Kotlin had to accept parameters:
+```kotlin
+fun main() {
+    println("Hello, Kotlin!")
+}
+```
+
+- `fun` means “function”.
+- `main` is the name of the function.
+- Parentheses after `main` are for parameters (here, there are none).
+- The code inside `{}` is what runs.
+
+Before Kotlin version 1.3, the `main` function could take parameters:
 
 ```kotlin
 fun main(args: Array<String>) {
-    println("Hello Kotlin")
+    println("Hello, Kotlin!")
 }
 ```
 
-The `args: Array<String>` parameter represents an array of strings through which data can be passed into the program.
-
-Starting with version 1.3, it is no longer mandatory to define the `main` function with parameters, although you may still use this definition if needed.
+Now, using parameters is optional.
 
 ## Statements and Code Blocks
 
-The fundamental building block of a Kotlin program is the statement. Each statement performs a specific action, such as calling functions, declaring variables, or assigning values. For example:
+A statement is a single action, like calling a function or assigning a value.
 
 ```kotlin
-println("Hello Kotlin!");
+println("Hello!")
 ```
 
-This line calls the built-in `println()` function, which prints a message (in this case, the string `"Hello Kotlin!"`) to the console.
-
-Unlike some other similar programming languages, such as Java, it is not necessary to put a semicolon at the end of each statement in Kotlin. Each statement can simply be placed on a new line:
+You don’t need to put a semicolon at the end of every line (unlike Java):
 
 ```kotlin
 fun main() {
-    println("Kotlin courses")
-    println("Hello Kotlin!")
-    println("Kotlin is a fun")
+    println("First line")
+    println("Second line")
 }
 ```
 
-However, if you place multiple statements on a single line, you need to separate them with a semicolon:
+But if you write several statements on one line, separate them with semicolons:
 
 ```kotlin
 fun main() {
-    println("Kotlin courses"); println("Hello Kotlin!"); println("Kotlin is a fun")
+    println("First"); println("Second")
 }
 ```
 
 ## Comments
 
-Source code can contain comments. Comments help explain the meaning of the program and what certain parts do. Comments are ignored during compilation and have no effect on the application's behavior or its size.
+Comments help explain your code. Kotlin supports:
 
-Kotlin supports two types of comments: single-line and multi-line. A single-line comment is placed on a line after two slashes `//`. A multi-line comment is enclosed between `/*` and `*/`, and can span multiple lines. For example:
+- **Single-line comments:** Start with `//`
+
+```kotlin
+// This is a single-line comment
+```
+
+- **Multi-line comments:** Start with `/*` and end with `*/`
 
 ```kotlin
 /*
-    Multi-line comment
-    The main function -
-    the entry point of the program
+This is a multi-line comment.
+It can span several lines.
 */
-fun main() {         // start of the main function
-    println("Hello Kotlin!") // print a line to the console
-}                   // end of the main function
 ```
+
+- **Documentation comments (KDoc):** Start with `/**` and end with `*/`. Used for generating documentation.
+
+## Variables and Data Types (`val` vs. `var`)
+
+You declare variables using `val` and `var`:
+
+- `val`: For values that do not change (like constants).
+
+    ```kotlin
+    val name: String = "John"
+    // name = "Jane" // This will cause an error
+    ```
+
+- `var`: For values that can change.
+
+    ```kotlin
+    var age: Int = 30
+    age = 31 // This is allowed
+    ```
+
+Kotlin can often guess the type of your variable from the value you assign, so you can skip writing the type:
+
+```kotlin
+val city = "London" // Kotlin knows this is a String
+```
+
+## Basic Operators
+
+Kotlin supports common operators:
+
+- **Arithmetic:** `+`, `-`, `*`, `/`, `%`
+- **Assignment:** `=`, `+=`, `-=`, `*=`, `/=`, `%=`
+- **Comparison:** `==`, `!=`, `>`, `<`, `>=`, `<=`
+- **Logical:** `&&`, `||`, `!`
+- **Increment/Decrement:** `++`, `--`
+
+**Example:**
+
+```kotlin
+val a = 10
+val b = 5
+val sum = a + b // 15
+val isGreater = a > b // true
+```
+
+---
+
+This chapter showed you how to set up Kotlin, write simple code, and use variables, comments, and basic operations.  
+You are ready to move on and learn more about data types and language features!

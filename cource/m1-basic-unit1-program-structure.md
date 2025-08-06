@@ -1,5 +1,6 @@
 # Program Structure
-_Last updated: 02.03.2024_
+Artyom Blinov
+Last update 05.08.2025
 
 ## The `main` Function
 

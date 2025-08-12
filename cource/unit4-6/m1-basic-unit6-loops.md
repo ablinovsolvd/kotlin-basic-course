@@ -34,6 +34,8 @@ This will print:
 ### Nested loops
 
 You can put one loop inside another.  
+This is called a **nested loop**.
+
 **Example: Print a multiplication table**
 
 ```kotlin
@@ -44,7 +46,26 @@ for (i in 1..9) {
     println()
 }
 ```
-This prints a multiplication table for numbers 1 to 9.
+
+**How does this work?**
+
+- The **outer loop** (`for (i in 1..9)`) starts and sets `i` to 1.
+- Then, for this `i`, the **inner loop** (`for (j in 1..9)`) starts.
+- The inner loop runs 9 times, with `j` going from 1 to 9.
+- On each inner loop step, the program prints the result of `i * j`.
+- After the inner loop finishes (when `j` has gone through all values), the program prints a new line (`println()`).
+- The outer loop then moves to the next `i` (2, 3, ..., 9), and the inner loop repeats for each new `i`.
+
+So, for each value of `i` (from 1 to 9),  
+the inner loop runs **9 times** (for `j` from 1 to 9),  
+calculating and printing the multiplication results for that row.
+
+In total, the code prints a full multiplication table for numbers 1 to 9,  
+where each row shows the results for one `i`.
+
+**Summary:**
+- For every value of `i`, the inner loop goes through all values of `j`.
+- So, the inner part (`print(...)`) runs 81 times in total (9 for each of 9 values of `i`).
 
 ---
 

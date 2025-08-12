@@ -15,4 +15,12 @@ fun main() {
         y + 5 -> println("x = y + 5")
         else -> println("Unknown value")
     }
+
+
+    for (i in 1..9) {
+        for (j in 1..9) {
+            print("${i * j} \t")
+        }
+        println()
+    }
 }

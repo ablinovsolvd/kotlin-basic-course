@@ -1,7 +1,4 @@
-# Unit 4: Loops
-
-_Last updated: 2024-03-26_
-
+# Unit 6: Loops
 ---
 
 ## What are loops?

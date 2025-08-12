@@ -1,6 +1,4 @@
-# Unit 2: Conditional Statement `if...else`
-
-_Last updated: 2024-03-02_
+# Unit 4: Conditional Statement `if...else`
 
 ---
 

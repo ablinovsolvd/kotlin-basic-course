@@ -1,6 +1,4 @@
-# Unit 3: The `when` Expression
-
-_Last updated: 2024-03-02_
+# Unit 5: The `when` Expression
 
 ---
 
@@ -101,7 +99,7 @@ when (a) {
 
 ## Checking ranges
 
-You can check if a value is inside a range using `in` or outside using `!in`:
+You can check if a value is inside a range using `in` or outside using (exclamation mark) `!in`:
 
 ```kotlin
 val a = 10

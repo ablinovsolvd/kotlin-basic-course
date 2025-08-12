@@ -4,8 +4,10 @@ fun main() {
     val name = "Kotlin"
     println("Hello, $name!")
 
-    for (i in 1..5) {
-        println("i = $i")
+
+    for (n in 1..8) {
+        if (n == 5) continue
+        print("$n \t")
     }
 }
 

@@ -10,10 +10,5 @@ fun task1() {
 }
 
 fun task2() {
-    println("Task 2")
-    val numbers = Array(3) { 1 }
-    println(numbers.contentToString())
-    for (i in numbers) {
-        print("$i \t")
-    }
+
 }

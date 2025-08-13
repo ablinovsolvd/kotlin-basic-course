@@ -28,8 +28,9 @@ fun unit6task1() {
     3(2,0)      6(2,1)      9(2,2)
  */
 fun unit6task2() {
-    for (i in 1 .. 9) {
-        for (j in 1 .. 9) {
+    val rangeOfNumbers = 1 .. 9
+    for (i in rangeOfNumbers) {
+        for (j in rangeOfNumbers) {
             print("${i * j} \t")
         }
         println()

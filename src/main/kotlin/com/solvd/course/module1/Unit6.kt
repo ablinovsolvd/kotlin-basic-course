@@ -8,7 +8,7 @@ package com.solvd.course.module1
      }
  */
 fun main() {
-    unit6task2()
+    unit6task6()
 }
 
 // `for` loop
@@ -35,4 +35,64 @@ fun unit6task2() {
         println()
     }
 }
+
+fun unit6task3() {
+    val fruits = arrayOf("apple", "banana", "orange")
+    for (fruit in fruits) {
+        println(fruit)
+    }
+}
+
+// `while` loop
+fun unit6task4() {
+    var i  = 10
+    while (i > 0) {
+        println("i=$i")
+        i--
+    }
+}
+
+// `do while` loop
+fun unit6task5() {
+    var i = -1;
+    do {
+        println("i=$i")
+        i--
+    } while (i > 0)
+}
+
+// `continue` and `break` in loops
+fun unit6task6() {
+    //continue
+    println("continue:")
+    for (i in 1..9) {
+        if (i == 5) {
+            continue
+        }
+        print("i=$i \t")
+    }
+
+    //break
+    println("\nbreak:")
+    for (i in 1..9) {
+        if (i == 5) {
+            break
+        }
+        print("i=$i \t")
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

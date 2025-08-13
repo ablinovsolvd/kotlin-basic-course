@@ -27,6 +27,3 @@ _Work with sequences of numbers or characters._
 
 ### **Unit 8 — Arrays**
 _Store and manage lists of data._
-
-### **Unit 9 — Practice Tasks**
-_Test your knowledge with practical exercises!_

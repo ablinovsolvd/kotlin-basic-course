@@ -5,40 +5,32 @@ Write each solution in your own Kotlin file, run it, and check the output.
 
 ---
 
-### Assignment 1: Immutable Variable (`val`)
-**Task:**  
-Create a variable called `daysInWeek` with the value 7. Don't write the type — let Kotlin figure it out.
+## Example solutions
+
+Here’s how your solutions might look for the first three assignments:
 
 ```kotlin
 fun main() {
+    task1()
+    task2()
+    task3()
+}
+
+// Assignment 1: Immutable Variable (val)
+fun task1() {
     val daysInWeek = 7
     println("There are $daysInWeek days in a week.")
 }
-```
 
----
-
-### Assignment 2: Mutable Variable (`var`)
-**Task:**  
-Make a variable called `userScore` with a starting value of 0. Add 10 to it and print the result.
-
-```kotlin
-fun main() {
+// Assignment 2: Mutable Variable (var)
+fun task2() {
     var userScore = 0
-    println("Initial score: $userScore")
     userScore += 10
     println("Final score: $userScore")
 }
-```
 
----
-
-### Assignment 3: Arithmetic Operators
-**Task:**  
-Create `width` and `height` variables. Find the area of a rectangle.
-
-```kotlin
-fun main() {
+// Assignment 3: Arithmetic Operators
+fun task3() {
     val width = 5
     val height = 10
     val area = width * height
@@ -48,16 +40,27 @@ fun main() {
 
 ---
 
+### Assignment 1: Immutable Variable (`val`)
+**Task:**  
+Create a variable called `daysInWeek` with the value 7. Don't write the type — let Kotlin figure it out.
+
+---
+
+### Assignment 2: Mutable Variable (`var`)
+**Task:**  
+Make a variable called `userScore` with a starting value of 0. Add 10 to it and print the result.
+
+---
+
+### Assignment 3: Arithmetic Operators
+**Task:**  
+Create `width` and `height` variables. Find the area of a rectangle.
+
+---
+
 ### Assignment 4: Explicit Type Declaration
 **Task:**  
 Make a variable `pi` with type `Double` and value `3.14159`.
-
-```kotlin
-fun main() {
-    val pi: Double = 3.14159
-    println("The value of Pi is: $pi")
-}
-```
 
 ---
 
@@ -65,42 +68,17 @@ fun main() {
 **Task:**  
 Add a comment explaining a variable that stores a user's name.
 
-```kotlin
-fun main() {
-    // Stores the name of the currently logged-in user
-    val userName = "Alex"
-    println("User: $userName")
-}
-```
-
 ---
 
 ### Assignment 6: Remainder Operator (%)
 **Task:**  
 Check if the number 25 is even, and store the result in `isEven`.
 
-```kotlin
-fun main() {
-    val number = 25
-    val isEven = number % 2 == 0
-    println("Is the number $number even? $isEven")
-}
-```
-
 ---
 
 ### Assignment 7: Template Strings
 **Task:**  
 Combine `firstName` and `lastName` into one variable called `fullName`.
-
-```kotlin
-fun main() {
-    val firstName = "John"
-    val lastName = "Doe"
-    val fullName = "$firstName $lastName"
-    println("Full name: $fullName")
-}
-```
 
 ---
 
@@ -117,30 +95,11 @@ fun main() {
 }
 ```
 
-```kotlin
-// The error happens because 'val' makes the variable read-only.
-// Use 'var' to make it changeable.
-fun main() {
-    var balance = 100
-    balance = 120
-    println("New balance: $balance")
-}
-```
-
 ---
 
 ### Assignment 9: Comparison Operators
 **Task:**  
 Check if `myAge` is enough to meet `requiredAge`.
-
-```kotlin
-fun main() {
-    val myAge = 18
-    val requiredAge = 21
-    val canEnter = myAge >= requiredAge
-    println("Can enter? $canEnter")
-}
-```
 
 ---
 
@@ -148,34 +107,11 @@ fun main() {
 **Task:**  
 Describe the logic of code that calculates a price with a discount.
 
-```kotlin
-fun main() {
-    /*
-      This block calculates the final price after a discount.
-      1. Set the base price.
-      2. Set the discount percentage.
-      3. Calculate the price after the discount.
-    */
-    val price = 200.0
-    val discountPercentage = 15.0
-    val finalPrice = price - (price * discountPercentage / 100)
-    println("Final price: $finalPrice")
-}
-```
-
 ---
 
 ### Assignment 11: Choosing the Right Data Type
 **Task:**  
 Store whether a user is active. Pick the best type and assign `true`.
-
-```kotlin
-fun main() {
-    // Boolean is best for true/false.
-    val isUserActive: Boolean = true
-    println("User is active: $isUserActive")
-}
-```
 
 ---
 
@@ -183,28 +119,11 @@ fun main() {
 **Task:**  
 Print a message about the temperature. If it's over 20, say "It is warm", otherwise say "It is cold".
 
-```kotlin
-fun main() {
-    val temperature = 15
-    println("It's $temperature degrees. ${if (temperature > 20) "It is warm." else "It is cold."}")
-}
-```
-
 ---
 
 ### Assignment 13: Combination of Operators
 **Task:**  
 Count apples in baskets and some extra apples.
-
-```kotlin
-fun main() {
-    val baskets = 3
-    val applesPerBasket = 15
-    val extraApples = 7
-    val totalApples = baskets * applesPerBasket + extraApples
-    println("Total apples: $totalApples")
-}
-```
 
 ---
 
@@ -212,28 +131,11 @@ fun main() {
 **Task:**  
 See if the door can be opened: you need both a key and the password.
 
-```kotlin
-fun main() {
-    val hasKey = true
-    val knowsPassword = false
-    val canOpenDoor = hasKey && knowsPassword
-    println("Can open the door? $canOpenDoor")
-}
-```
-
 ---
 
 ### Assignment 15: Increment Operator
 **Task:**  
 Increase `messageCount` by 1 and print the result.
-
-```kotlin
-fun main() {
-    var messageCount = 99
-    messageCount++
-    println("New messages: $messageCount")
-}
-```
 
 ---
 
@@ -247,8 +149,7 @@ Test yourself with these quick questions!
 a) Google  
 b) Oracle  
 c) JetBrains  
-d) Microsoft  
-**Answer:** c) JetBrains
+d) Microsoft
 
 ---
 
@@ -256,8 +157,7 @@ d) Microsoft
 a) `var`  
 b) `const`  
 c) `let`  
-d) `val`  
-**Answer:** d) `val`
+d) `val`
 
 ---
 
@@ -265,8 +165,7 @@ d) `val`
 a) `function start()`  
 b) `public static void main(String[] args)`  
 c) `fun main()`  
-d) `init()`  
-**Answer:** c) `fun main()`
+d) `init()`
 
 ---
 
@@ -274,8 +173,7 @@ d) `init()`
 a) Type Inference  
 b) Null Safety  
 c) Coroutines  
-d) Data Classes  
-**Answer:** b) Null Safety
+d) Data Classes
 
 ---
 
@@ -283,8 +181,7 @@ d) Data Classes
 a) `"Hello, " + username`  
 b) `f"Hello, {username}"`  
 c) `"Hello, $username"`  
-d) `"Hello, %s".format(username)`  
-**Answer:** c) `"Hello, $username"`
+d) `"Hello, %s".format(username)`
 
 ---
 
@@ -292,8 +189,7 @@ d) `"Hello, %s".format(username)`
 a) Python  
 b) C++  
 c) Swift  
-d) Java  
-**Answer:** d) Java
+d) Java
 
 ---
 
@@ -301,8 +197,7 @@ d) Java
 a) `// This is a comment`  
 b) `# This is a comment`  
 c) `/* This is a comment */`  
-d) `<!-- This is a comment -->`  
-**Answer:** c) `/* This is a comment */`
+d) `<!-- This is a comment -->`
 
 ---
 
@@ -310,8 +205,7 @@ d) `<!-- This is a comment -->`
 a) Web Development  
 b) iOS Development  
 c) Android Development  
-d) Data Science  
-**Answer:** c) Android Development
+d) Data Science
 
 ---
 
@@ -324,8 +218,7 @@ println(count)
 a) 10  
 b) 12  
 c) Compile error  
-d) Runtime error  
-**Answer:** b) 12
+d) Runtime error
 
 ---
 
@@ -333,7 +226,6 @@ d) Runtime error
 a) Automatic conversion between types  
 b) Variables can change type while running  
 c) Kotlin detects the type from the value, so you don't need to write it  
-d) Prevents variables from being null  
-**Answer:** c) Kotlin detects the type from the value, so you don't need to write it
+d) Prevents variables from being null
 
 ---

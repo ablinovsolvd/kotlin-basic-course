@@ -1,0 +1,38 @@
+package com.solvd.course.module1
+
+// Loops
+/**
+ * Basic form:
+ * for (variable in sequence) {
+ *  // instructions to repeat
+ * }
+ */
+fun main() {
+    unit6task2()
+}
+
+// for loop
+fun unit6task1() {
+    //1 2 3 4 5
+    //for (int i = 0; i < array.size(); i++)
+    for (i in 1..9) {
+        print("${i * i} \t")
+    }
+}
+
+/*
+       Simple Matrix with coordinates (row, column)
+       _____________________________________________
+       1(0,0)      2(0,1)      3(0,2)
+       2(1,0)      4(1,1)      6(1,2)
+       3(2,0)      6(2,1)      9(2,2)
+ */
+fun unit6task2() {
+    for (i in 1 .. 9) {
+        for (j in 1 .. 9) {
+            print("${i * j} \t")
+        }
+        println()
+    }
+}
+

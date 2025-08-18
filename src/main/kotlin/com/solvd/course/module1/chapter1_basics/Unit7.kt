@@ -1,4 +1,4 @@
-package com.solvd.course.module1
+package com.solvd.course.module1.chapter1_basics
 
 // Ranges
 fun main() {

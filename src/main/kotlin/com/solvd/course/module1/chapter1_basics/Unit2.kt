@@ -1,4 +1,4 @@
-package com.solvd.course.module1
+package com.solvd.course.module1.chapter1_basics
 
 fun main() {
     val a = 10

@@ -3,6 +3,10 @@ package com.solvd.course.module1.chapter1_basics
 // first program
 fun main() {
     println("Hello, World!")
+    var number = 1;
+    var a: Int = number
+    number++
+    a = number
 }
 
 fun unit1task1() {

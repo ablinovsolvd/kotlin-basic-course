@@ -8,7 +8,7 @@ fun main() {
     println(sum(15, 5))
 
     doOperation(9, 5, fun(x: Int, y: Int): Int = x + y) //14
-    doOperation(9, 5, fun(x: Int, y: Int): Int = x - y) //14
+    doOperation(9, 5, fun(x: Int, y: Int): Int = x - y) //4
 
     var action1 = selectActionForOperation(1)
     println(action1(4, 5))

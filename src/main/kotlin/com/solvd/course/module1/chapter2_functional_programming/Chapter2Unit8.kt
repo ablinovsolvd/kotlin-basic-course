@@ -21,9 +21,9 @@ fun doOperation(x: Int, y: Int, op: (Int, Int) -> Int) {
 }
 
 fun selectActionForOperation(key: Int): (Int, Int) -> Int {
-    when(key) {
-        1 -> return fun(x: Int, y: Int): Int = x + y
-        2 -> return fun(x: Int, y: Int): Int = x - y
-        else -> return fun(x: Int, y: Int): Int = 0
+    return when(key) {
+        1 -> fun(x: Int, y: Int): Int = x + y
+        2 -> fun(x: Int, y: Int): Int = x - y
+        else -> fun(x: Int, y: Int): Int = 0
     }
 }

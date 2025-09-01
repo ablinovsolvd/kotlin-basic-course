@@ -10,27 +10,21 @@ Write each solution in your own Kotlin file, run it, and check the output.
 Here’s how your solutions might look for the first three assignments:
 
 ```kotlin
-fun main() {
-    task1()
-    task2()
-    task3()
-}
-
 // Assignment 1: Immutable Variable (val)
-fun task1() {
+fun main() {
     val daysInWeek = 7
     println("There are $daysInWeek days in a week.")
 }
 
 // Assignment 2: Mutable Variable (var)
-fun task2() {
+fun main() {
     var userScore = 0
     userScore += 10
     println("Final score: $userScore")
 }
 
 // Assignment 3: Arithmetic Operators
-fun task3() {
+fun main() {
     val width = 5
     val height = 10
     val area = width * height

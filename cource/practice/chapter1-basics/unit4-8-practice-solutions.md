@@ -160,3 +160,7 @@ println("Sum: $sum")
 ```
 
 ---
+
+Great job!  
+Each answer shows how the concept works in practice.  
+Try to change the values and see what happens!

@@ -103,3 +103,6 @@ Print the sum of all numbers in the array.
 ```
 
 ---
+
+Good luck!  
+Try to solve each task yourself. If you get stuck, ask for help or check the lesson notes.

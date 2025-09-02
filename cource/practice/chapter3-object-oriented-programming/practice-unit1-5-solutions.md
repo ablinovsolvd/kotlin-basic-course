@@ -281,3 +281,108 @@ fun main() {
 Name can't be set to an empty string.
 
 ---
+
+## Unit 5: Access Modifiers Solutions and Explanations
+
+**Task 1 Solution: Safe Bank Account**
+
+**Code:**
+```kotlin
+class BankAccount {
+    private var balance: Double = 0.0
+
+    fun deposit(amount: Double) {
+        if (amount > 0) balance += amount
+    }
+
+    fun getBalance(): Double {
+        return balance
+    }
+}
+
+fun main() {
+    val account = BankAccount()
+    account.deposit(150.0)
+    println("Your balance: ${account.getBalance()}") // Your balance: 150.0
+
+    // println(account.balance) // Error! balance is private
+}
+```
+
+**Explanation:**
+- The `balance` property is private, so it can only be changed or read inside the class.
+- You can’t access `balance` directly outside the class.
+- You use `deposit()` to add money, and `getBalance()` to check your balance.
+- If you try `account.balance`, the compiler will give an error — this keeps your money safe!
+
+**Task 2 Solution: Family Members**
+
+**Code:**
+```kotlin
+open class Person(protected val lastName: String) {
+    var firstName: String = ""
+    fun showFullName() {
+        println("$firstName $lastName")
+    }
+}
+
+class Child(lastName: String) : Person(lastName) {
+    fun printLastName() {
+        println("Child's last name is $lastName") // OK, protected is visible here
+    }
+}
+
+fun main() {
+    val parent = Person("Smith")
+    parent.firstName = "John"
+    parent.showFullName() // John Smith
+
+    val child = Child("Smith")
+    child.firstName = "Anna"
+    child.showFullName() // Anna Smith
+    child.printLastName() // Child's last name is Smith
+
+    // println(parent.lastName) // Error! lastName is protected
+    // println(child.lastName) // Error! lastName is protected
+}
+```
+
+**Explanation:**
+- `lastName` is protected: only `Person` and its children (like `Child`) can use it.
+- You can use it inside the class, and inside classes that inherit from it.
+- You can’t use it directly outside, so `parent.lastName` or `child.lastName` won’t work.
+
+**Task 3 Solution: Secret Recipe**
+
+**Code:**
+```kotlin
+class Recipe(internal val ingredients: List<String>, val name: String) {
+    private fun printIngredients() {
+        println("Ingredients:")
+        for (ingredient in ingredients) {
+            println("- $ingredient")
+        }
+    }
+
+    fun showRecipe() {
+        println("Recipe: $name")
+        printIngredients()
+    }
+}
+
+fun main() {
+    val recipe = Recipe(listOf("Flour", "Sugar", "Eggs"), "Cake")
+    recipe.showRecipe()
+    // recipe.printIngredients() // Error! printIngredients is private
+    // println(recipe.ingredients) // OK in this file and module
+}
+```
+
+**Explanation:**
+- The `ingredients` property is internal: it can be used anywhere in the same module/project, but not from outside.
+- The `printIngredients()` function is private: only the `Recipe` class can use it.
+- In your main function, you use `showRecipe()`, which calls the private function.
+- If you try to call `printIngredients()` directly, you’ll get an error.
+- If you access `ingredients` from another file in the same module, it works; but in a different module, it won’t.
+
+---

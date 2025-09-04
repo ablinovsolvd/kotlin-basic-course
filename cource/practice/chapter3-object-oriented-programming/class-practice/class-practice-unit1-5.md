@@ -1,4 +1,4 @@
-# Extra Practice Tasks — Units 1-4
+# Class Practice Tasks — Units 1-5
 
 ---
 
@@ -30,5 +30,44 @@ Make a tiny library system using classes and packages.
 - Add a setter for `title` so that empty titles are not allowed.
 - In another file, import the `Book` class, create two books, and print their descriptions.
 - Try to set one book's title to an empty string and show that the title does not change.
+
+---
+
+## Task 3: "Employee Access Control"
+
+Create a package called `company`.  
+Inside it, make a class `Employee` with:
+
+- A public property `name` (String).
+- A private property `salary` (Double).
+- A public constructor to set both values.
+- A public function `showInfo()` that prints the name and salary.
+- A public function `giveRaise(amount: Double)` that increases salary by `amount`.
+
+In your main function:
+- Import `Employee` and create an employee.
+- Try to read and change the salary directly from main (it should not work).
+- Give the employee a raise and print their info.
+
+---
+
+## Task 4: "Student Grades with Protected Data"
+
+Create a package called `school`.  
+Inside it, make a base class `Student` with:
+
+- A public property `name` (String).
+- A protected property `grade` (Int).
+- A constructor that sets both values.
+- A public function `showGrade()` that prints the student's name and grade.
+
+Create a subclass `HonorsStudent` that inherits from `Student` and:
+
+- Has a function `boostGrade()` that increases `grade` by 5 (but not higher than 100).
+
+In your main function:
+- Import both classes, create a `Student` and an `HonorsStudent`.
+- Use `boostGrade()` on the honors student and print the grades.
+- Try to access the `grade` property directly from main (should not work).
 
 ---

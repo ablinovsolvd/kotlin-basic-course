@@ -162,7 +162,7 @@ The function adds two numbers.
 Import and use the add function.
 
 ```kotlin
-// In app.kt
+// In appOOP.kt
 import mathops.add
 
 fun main() {
@@ -188,7 +188,7 @@ fun concat(a: String, b: String): String {
 ```
 
 ```kotlin
-// In app.kt
+// In appOOP.kt
 import mathops.add
 import stringops.concat
 

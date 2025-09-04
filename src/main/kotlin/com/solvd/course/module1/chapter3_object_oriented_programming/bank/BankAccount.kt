@@ -20,16 +20,16 @@ class BankAccount {
         }
     }
 
-    fun getBalanceFun(): Double {
+    fun getBalance(): Double {
         return balance
     }
 }
 
 fun main() {
     val bankAccount = BankAccount()
-    var balance = bankAccount.getBalanceFun()
+    var balance = bankAccount.getBalance()
     println("Before: $balance")
     bankAccount.deposit(150.0)
-    balance = bankAccount.getBalanceFun()
+    balance = bankAccount.getBalance()
     println("After: $balance")
 }

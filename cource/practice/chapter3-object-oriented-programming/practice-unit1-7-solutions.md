@@ -422,19 +422,19 @@ We make a base class for medical accounts and override its notification function
 
 ```kotlin
 open class MedicalAccount(val username: String) {
-    open fun notify() {
+    open fun notification() {
         println("General medical notification for $username")
     }
 }
 
 class DoctorAccount(username: String) : MedicalAccount(username) {
-    override fun notify() {
+    override fun notification() {
         println("Doctor alert for $username")
     }
 }
 
 class PatientAccount(username: String) : MedicalAccount(username) {
-    override fun notify() {
+    override fun notification() {
         println("Patient reminder for $username")
     }
 }
@@ -444,15 +444,15 @@ fun main() {
     val doctor = DoctorAccount("dr.jones")
     val patient = PatientAccount("marta_p")
 
-    general.notify()  // General medical notification for alex_med
-    doctor.notify()   // Doctor alert for dr.jones
-    patient.notify()  // Patient reminder for marta_p
+    general.notification()  // General medical notification for alex_med
+    doctor.notification()   // Doctor alert for dr.jones
+    patient.notification()  // Patient reminder for marta_p
 }
 ```
 
 **Explanation:**
 - The base class has a general notification message.
 - Each child class changes (`overrides`) the message to fit its role.
-- Calling `notify()` on each account type prints different messages.
+- Calling `notification()` on each account type prints different messages.
 
 ---

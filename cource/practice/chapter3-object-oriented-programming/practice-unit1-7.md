@@ -115,9 +115,9 @@ Imagine you are building a system for a university.
 
 Suppose you are working on a medical app.
 
-- Create a base class `MedicalAccount` with a property `username` (String) and a function `notify()` that prints `"General medical notification for {username}"`.
-- Create a class `DoctorAccount` that inherits from `MedicalAccount` and overrides the `notify()` function to print `"Doctor alert for {username}"`.
-- Create a class `PatientAccount` that also inherits from `MedicalAccount` and overrides the `notify()` function to print `"Patient reminder for {username}"`.
+- Create a base class `MedicalAccount` with a property `username` (String) and a function `notification()` that prints `"General medical notification for {username}"`.
+- Create a class `DoctorAccount` that inherits from `MedicalAccount` and overrides the `notification()` function to print `"Doctor alert for {username}"`.
+- Create a class `PatientAccount` that also inherits from `MedicalAccount` and overrides the `notification()` function to print `"Patient reminder for {username}"`.
 - Create objects of each type and call their `notify()` function to see the different messages.
 
 ---

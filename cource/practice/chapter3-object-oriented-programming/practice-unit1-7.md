@@ -56,35 +56,68 @@ Add a private field `_name` to `Student` and a public property `name` with custo
 
 ## Unit 5: Access Modifiers Practice Tasks
 
+---
+
 **Task 1: Safe Bank Account**
 
 Create a class `BankAccount` with the following:
+
 - A private property `balance` (Double) that stores the account balance.
 - A public function `deposit(amount: Double)` that adds money to the balance.
 - A public function `getBalance()` that returns the current balance.
 
-Try to access the balance directly from outside the class and see what happens.
+Try to access the `balance` directly from outside the class and see what happens.
 
-**Task 2: Family Members**
+---
+
+**Task 2: Easy Person**
 
 Create a class `Person` with:
-- A protected property `lastName` (String).
+
+- A private property `lastName` (String).
 - A public property `firstName` (String).
-- A public function `showFullName()` that prints the full name.
+- A public function `showFullName()` that prints the full name (first and last name together).
 
-Then, create a class `Child` that inherits from `Person` and prints the last name using a function.
+Try to access `lastName` directly from outside the class and see what happens.
 
-Try to access `lastName` from outside both classes.
+---
 
-**Task 3: Secret Recipe**
+**Task 3: Simple Recipe**
 
 Create a class `Recipe` with:
-- An internal property `ingredients` (List of String).
+
+- A private property `ingredients` (List of String).
 - A public property `name` (String).
-- A private function `printIngredients()` that prints all ingredients.
+- A public function `printIngredients()` that prints all ingredients.
 
 In your main function, print the recipe name and call `printIngredients()`.
 
-Try to access `ingredients` from another file in the same module and from a different module.
+Try to access `ingredients` directly from outside the class and see what happens.
+
+---
+
+## Unit 6: Inheritance Practice Task
+
+**Task 1: University Accounts**
+
+Imagine you are building a system for a university.
+
+- Create a base class `UniversityAccount` with properties: `username` (String) and `email` (String).
+- Add a function `showInfo()` that prints the username and email.
+- Create a class `StudentAccount` that inherits from `UniversityAccount` and adds a property `studentId` (Int).
+- In `StudentAccount`, add a function `showStudentInfo()` that prints all account info plus the student ID.
+
+---
+
+## Unit 7: Overriding Practice Task
+
+**Task 1: Medical Account Notifications**
+
+Suppose you are working on a medical app.
+
+- Create a base class `MedicalAccount` with a property `username` (String) and a function `notify()` that prints `"General medical notification for {username}"`.
+- Create a class `DoctorAccount` that inherits from `MedicalAccount` and overrides the `notify()` function to print `"Doctor alert for {username}"`.
+- Create a class `PatientAccount` that also inherits from `MedicalAccount` and overrides the `notify()` function to print `"Patient reminder for {username}"`.
+- Create objects of each type and call their `notify()` function to see the different messages.
 
 ---

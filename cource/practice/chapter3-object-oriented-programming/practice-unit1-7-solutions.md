@@ -162,7 +162,7 @@ The function adds two numbers.
 Import and use the add function.
 
 ```kotlin
-// In appOOP.kt
+// In app.kt
 import mathops.add
 
 fun main() {
@@ -188,7 +188,7 @@ fun concat(a: String, b: String): String {
 ```
 
 ```kotlin
-// In appOOP.kt
+// In app.kt
 import mathops.add
 import stringops.concat
 
@@ -284,6 +284,8 @@ Name can't be set to an empty string.
 
 ## Unit 5: Access Modifiers Solutions and Explanations
 
+---
+
 **Task 1 Solution: Safe Bank Account**
 
 **Code:**
@@ -310,79 +312,147 @@ fun main() {
 ```
 
 **Explanation:**
-- The `balance` property is private, so it can only be changed or read inside the class.
-- You can’t access `balance` directly outside the class.
-- You use `deposit()` to add money, and `getBalance()` to check your balance.
-- If you try `account.balance`, the compiler will give an error — this keeps your money safe!
+- The `balance` property is private, so only the class itself can read or change it.
+- You can't use `account.balance` outside the class—this protects your money!
+- You use `deposit()` to add money and `getBalance()` to see how much is in the account.
+- If you try to use `account.balance`, you get a compiler error.
 
-**Task 2 Solution: Family Members**
+---
+
+**Task 2 Solution: Easy Person**
 
 **Code:**
 ```kotlin
-open class Person(protected val lastName: String) {
+class Person(private val lastName: String) {
     var firstName: String = ""
     fun showFullName() {
         println("$firstName $lastName")
     }
 }
 
-class Child(lastName: String) : Person(lastName) {
-    fun printLastName() {
-        println("Child's last name is $lastName") // OK, protected is visible here
-    }
-}
-
 fun main() {
-    val parent = Person("Smith")
-    parent.firstName = "John"
-    parent.showFullName() // John Smith
+    val person = Person("Smith")
+    person.firstName = "John"
+    person.showFullName() // John Smith
 
-    val child = Child("Smith")
-    child.firstName = "Anna"
-    child.showFullName() // Anna Smith
-    child.printLastName() // Child's last name is Smith
-
-    // println(parent.lastName) // Error! lastName is protected
-    // println(child.lastName) // Error! lastName is protected
+    // println(person.lastName) // Error! lastName is private
 }
 ```
 
 **Explanation:**
-- `lastName` is protected: only `Person` and its children (like `Child`) can use it.
-- You can use it inside the class, and inside classes that inherit from it.
-- You can’t use it directly outside, so `parent.lastName` or `child.lastName` won’t work.
+- The `lastName` property is private, so it can only be used inside the `Person` class.
+- You can't use `person.lastName` outside the class.
+- To see the full name, use `showFullName()`.
+- If you try to get `lastName` directly, the compiler will show an error.
 
-**Task 3 Solution: Secret Recipe**
+---
+
+**Task 3 Solution: Simple Recipe**
 
 **Code:**
 ```kotlin
-class Recipe(internal val ingredients: List<String>, val name: String) {
-    private fun printIngredients() {
+class Recipe(private val ingredients: List<String>, val name: String) {
+    fun printIngredients() {
         println("Ingredients:")
         for (ingredient in ingredients) {
             println("- $ingredient")
         }
     }
-
-    fun showRecipe() {
-        println("Recipe: $name")
-        printIngredients()
-    }
 }
 
 fun main() {
     val recipe = Recipe(listOf("Flour", "Sugar", "Eggs"), "Cake")
-    recipe.showRecipe()
-    // recipe.printIngredients() // Error! printIngredients is private
-    // println(recipe.ingredients) // OK in this file and module
+    println("Recipe name: ${recipe.name}")
+    recipe.printIngredients()
+    // println(recipe.ingredients) // Error! ingredients is private
 }
 ```
 
 **Explanation:**
-- The `ingredients` property is internal: it can be used anywhere in the same module/project, but not from outside.
-- The `printIngredients()` function is private: only the `Recipe` class can use it.
-- In your main function, you use `showRecipe()`, which calls the private function.
-- If you try to call `printIngredients()` directly, you’ll get an error.
-- If you access `ingredients` from another file in the same module, it works; but in a different module, it won’t.
+- The `ingredients` property is private, so it can only be used inside the `Recipe` class.
+- You can't use `recipe.ingredients` outside the class.
+- To print the ingredients, use `printIngredients()`.
+- If you try to get `ingredients` directly, you will see an error.
+
+---
+
+## Unit 6: Inheritance Practice Solution
+
+**Task 1 Solution: University Accounts**
+
+We build a base class for university accounts and a child class for student accounts.
+
+```kotlin
+open class UniversityAccount(val username: String, val email: String) {
+    fun showInfo() {
+        println("Username: $username, Email: $email")
+    }
+}
+
+class StudentAccount(username: String, email: String, val studentId: Int)
+    : UniversityAccount(username, email) {
+
+    fun showStudentInfo() {
+        showInfo()
+        println("Student ID: $studentId")
+    }
+}
+
+fun main() {
+    val student = StudentAccount("john_doe", "john@university.edu", 123456)
+    student.showStudentInfo()
+    // Output:
+    // Username: john_doe, Email: john@university.edu
+    // Student ID: 123456
+}
+```
+
+**Explanation:**
+- `UniversityAccount` is the parent class with common account info.
+- `StudentAccount` gets everything from `UniversityAccount` and adds `studentId`.
+- You can use functions from the parent and child to print all info.
+
+---
+
+## Unit 7: Overriding Practice Solution
+
+**Task 1 Solution: Medical Account Notifications**
+
+We make a base class for medical accounts and override its notification function in two child classes.
+
+```kotlin
+open class MedicalAccount(val username: String) {
+    open fun notify() {
+        println("General medical notification for $username")
+    }
+}
+
+class DoctorAccount(username: String) : MedicalAccount(username) {
+    override fun notify() {
+        println("Doctor alert for $username")
+    }
+}
+
+class PatientAccount(username: String) : MedicalAccount(username) {
+    override fun notify() {
+        println("Patient reminder for $username")
+    }
+}
+
+fun main() {
+    val general = MedicalAccount("alex_med")
+    val doctor = DoctorAccount("dr.jones")
+    val patient = PatientAccount("marta_p")
+
+    general.notify()  // General medical notification for alex_med
+    doctor.notify()   // Doctor alert for dr.jones
+    patient.notify()  // Patient reminder for marta_p
+}
+```
+
+**Explanation:**
+- The base class has a general notification message.
+- Each child class changes (`overrides`) the message to fit its role.
+- Calling `notify()` on each account type prints different messages.
 
 ---

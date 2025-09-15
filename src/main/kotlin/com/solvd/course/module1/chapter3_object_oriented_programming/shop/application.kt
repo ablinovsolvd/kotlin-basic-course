@@ -1,28 +1,34 @@
 package com.solvd.course.module1.chapter3_object_oriented_programming.shop
 
-import com.solvd.course.module1.chapter3_object_oriented_programming.shop.entity.ExpressOrder
-import com.solvd.course.module1.chapter3_object_oriented_programming.shop.entity.GiftOrder
-import com.solvd.course.module1.chapter3_object_oriented_programming.shop.entity.Order
+import com.solvd.course.module1.chapter3_object_oriented_programming.shop.banckaccount.entity.BankAccount
+import com.solvd.course.module1.chapter3_object_oriented_programming.shop.banckaccount.service.impl.AccountServiceImpl
+import com.solvd.course.module1.chapter3_object_oriented_programming.shop.order.entity.ExpressOrder
+import com.solvd.course.module1.chapter3_object_oriented_programming.shop.order.entity.GiftOrder
+import com.solvd.course.module1.chapter3_object_oriented_programming.shop.order.service.impl.OnlineOrderService
+import com.solvd.course.module1.chapter3_object_oriented_programming.shop.user.entity.User
 
 /**
- * You are working on an online shopping system.
- *
- * - There is a class `Order` with properties like `orderId` and `status`, and a function `displayInfo()` that shows basic info about the order.
- * - Make a class `ExpressOrder` that comes from `Order` and adds the property `expressFee`.
- * - Override `displayInfo()` in `ExpressOrder` so it shows all order info plus the express fee.
- * - Make another class `GiftOrder` that comes from `ExpressOrder` and adds a property `giftMessage`.
- * - Override `displayInfo()` in `GiftOrder` so it shows all info, fee, and the gift message.
- *
- * **Extra:**
- * Use access modifiers so that `expressFee` can only be changed inside `ExpressOrder` and its subclasses, but not from outside.
+ * 6. Main Scenario
+ * Create a user with some money in the bank.
+ * Make a few orders: regular, express, gift.
+ * Process the orders using the services.
+ * Print all info: balances, order details, and show what happens if the user does not have enough money.
  */
 fun main() {
-    val order = Order(1001L, "PENDING")
-    order.displayInfo()
+    val account = BankAccount(50.0)
+    val user = User("Alice", account)
+    user.showBalance()
 
-    val express = ExpressOrder(1002L, "SHIPPED", 5.0)
-    express.displayInfo()
+    val accountService = AccountServiceImpl() //Apple
+    val orderService = OnlineOrderService(accountService)
 
-    val gift = GiftOrder(1003, "DELIVERED", 7.0, "Happy Birthday!")
-    gift.displayInfo()
+    val expressOrder = ExpressOrder(1001L, user, 10.0, 43.0)
+    expressOrder.displayInfo()
+
+    val giftOrder = GiftOrder(2002L, user, 3.0, 7.0, "Happy Birthday!")
+    giftOrder.displayInfo()
+
+    orderService.processOrder(expressOrder)
+    orderService.processOrder(giftOrder)
+    user.showBalance()
 }

@@ -1,11 +1,10 @@
 package com.solvd.course.module1.chapter3_object_oriented_programming.shop
 
-import com.solvd.course.module1.chapter3_object_oriented_programming.shop.banckaccount.entity.BankAccount
-import com.solvd.course.module1.chapter3_object_oriented_programming.shop.banckaccount.service.impl.AccountServiceImpl
-import com.solvd.course.module1.chapter3_object_oriented_programming.shop.order.entity.ExpressOrder
-import com.solvd.course.module1.chapter3_object_oriented_programming.shop.order.entity.GiftOrder
-import com.solvd.course.module1.chapter3_object_oriented_programming.shop.order.service.impl.OnlineOrderService
-import com.solvd.course.module1.chapter3_object_oriented_programming.shop.user.entity.User
+import com.solvd.course.module1.chapter3_object_oriented_programming.shop.entity.*
+import com.solvd.course.module1.chapter3_object_oriented_programming.shop.service.impl.AccountServiceImpl
+//import com.solvd.course.module1.chapter3_object_oriented_programming.shop.entity.ExpressOrder
+//import com.solvd.course.module1.chapter3_object_oriented_programming.shop.entity.GiftOrder
+import com.solvd.course.module1.chapter3_object_oriented_programming.shop.service.impl.OnlineOrderService
 
 /**
  * 6. Main Scenario
@@ -14,21 +13,33 @@ import com.solvd.course.module1.chapter3_object_oriented_programming.shop.user.e
  * Process the orders using the services.
  * Print all info: balances, order details, and show what happens if the user does not have enough money.
  */
-fun main() {
-    val account = BankAccount(50.0)
-    val user = User("Alice", account)
-    user.showBalance()
 
-    val accountService = AccountServiceImpl() //Apple
+fun main() {
+    val address = Address("123 Main St", "Springfield", "12345", "Disnayland")
+    val account = BankAccount(200.0)
+    val user = User(1, "Tom", "tom@email.com", "+1234567890", address, account)
+
+    val p1 = Product(1, "laptop", 120.0)
+    val p2 = Product(1, "Mouse", 25.0)
+    val p3 = Product(1, "Mug", 10.0)
+
+    val cart = Cart()
+    cart.addProduct(p1)
+    cart.addProduct(p2)
+    cart.addProduct(p3)
+
+    val accountService = AccountServiceImpl()
     val orderService = OnlineOrderService(accountService)
 
-    val expressOrder = ExpressOrder(1001L, user, 10.0, 43.0)
-    expressOrder.displayInfo()
+    val order = Order(101, user, cart.getProducts(), address)
 
-    val giftOrder = GiftOrder(2002L, user, 3.0, 7.0, "Happy Birthday!")
-    giftOrder.displayInfo()
+    order.displayInfo()
+    order.track()
+    orderService.processOrder(order)
+    order.track()
 
-    orderService.processOrder(expressOrder)
-    orderService.processOrder(giftOrder)
+    user.showBalance()
+    println("-----------------------")
+    orderService.cancelOrder(order)
     user.showBalance()
 }

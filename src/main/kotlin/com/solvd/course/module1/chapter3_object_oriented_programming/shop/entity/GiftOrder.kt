@@ -1,6 +1,4 @@
-package com.solvd.course.module1.chapter3_object_oriented_programming.shop.order.entity
-
-import com.solvd.course.module1.chapter3_object_oriented_programming.shop.user.entity.User
+package com.solvd.course.module1.chapter3_object_oriented_programming.shop.entity
 
 /**
  * Make a class GiftOrder (inherits ExpressOrder) with:
@@ -8,6 +6,7 @@ import com.solvd.course.module1.chapter3_object_oriented_programming.shop.user.e
  * Property giftMessage (String)
  * Override displayInfo() to show all info including the gift message.
  */
+/*
 class GiftOrder(orderId: Long,
                 user: User,
                 expressFee: Double,
@@ -21,3 +20,5 @@ class GiftOrder(orderId: Long,
                 "Gift Message: $giftMessage")
     }
 }
+
+ */

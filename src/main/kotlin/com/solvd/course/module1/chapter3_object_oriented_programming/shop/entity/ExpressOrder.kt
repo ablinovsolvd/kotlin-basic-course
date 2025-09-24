@@ -1,7 +1,4 @@
-package com.solvd.course.module1.chapter3_object_oriented_programming.shop.order.entity
-
-import com.solvd.course.module1.chapter3_object_oriented_programming.shop.user.entity.User
-import jdk.internal.org.objectweb.asm.util.Printer
+package com.solvd.course.module1.chapter3_object_oriented_programming.shop.entity
 
 /**
  * Make a class ExpressOrder (inherits Order) with:
@@ -10,6 +7,7 @@ import jdk.internal.org.objectweb.asm.util.Printer
  * Override totalAmount() to include the express fee.
  * Override displayInfo() to show all info.
  */
+/*
 open class ExpressOrder(
     orderId: Long,
     user: User,
@@ -27,3 +25,5 @@ open class ExpressOrder(
                 "Total: ${totalAmount()}")
     }
 }
+
+ */

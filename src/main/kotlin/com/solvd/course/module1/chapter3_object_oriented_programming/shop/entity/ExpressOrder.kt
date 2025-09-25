@@ -1,5 +1,7 @@
 package com.solvd.course.module1.chapter3_object_oriented_programming.shop.entity
 
+import com.solvd.course.module1.chapter3_object_oriented_programming.shop.entity.status.OrderStatus
+
 /**
  * Make a class ExpressOrder (inherits Order) with:
  *
@@ -7,23 +9,22 @@ package com.solvd.course.module1.chapter3_object_oriented_programming.shop.entit
  * Override totalAmount() to include the express fee.
  * Override displayInfo() to show all info.
  */
-/*
 open class ExpressOrder(
-    orderId: Long,
+    orderId: Int,
     user: User,
-    protected var expressFee: Double,
-    private val baseAmount: Double
-) : Order(orderId, user) {
+    products: List<Product>,
+    deliveryAddress: Address,
+    private val expressFee: Double,
+    status: OrderStatus = OrderStatus.PENDING
+) : Order(orderId, user, products, deliveryAddress, status) {
 
     override fun totalAmount(): Double {
-        return baseAmount + expressFee
+        return super.totalAmount() + expressFee
     }
 
     override fun displayInfo() {
-        println("Order #$orderId for ${user.name} - " +
-                "Express Fee: $expressFee - " +
-                "Total: ${totalAmount()}")
+        super.displayInfo()
+        println("Express Fee: $expressFee")
+        println("Total with Express Fee: ${totalAmount()}")
     }
 }
-
- */

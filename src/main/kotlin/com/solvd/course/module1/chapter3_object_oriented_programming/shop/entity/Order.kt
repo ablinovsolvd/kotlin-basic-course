@@ -21,18 +21,19 @@ import com.solvd.course.module1.chapter3_object_oriented_programming.shop.servic
  * ExpressOrder adds protected expressFee (Double).
  * GiftOrder adds giftMessage (String).
  */
-class Order(
+open class Order(
     private val orderId: Int,
     private val user: User,
     private val products: List<Product>,
     private val deliveryAddress: Address,
     private var status: OrderStatus = OrderStatus.PENDING
 ): Trackable {
-    fun totalAmount(): Double {
+
+    open fun totalAmount(): Double {
         return products.sumOf { it.price }
     }
 
-    fun displayInfo() {
+    open fun displayInfo() {
         println("-----------------------")
         println("ORDER INFO:")
         println("Order #$orderId for ${user.name} - Status: $status")

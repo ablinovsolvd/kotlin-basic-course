@@ -2,8 +2,6 @@ package com.solvd.course.module1.chapter3_object_oriented_programming.shop
 
 import com.solvd.course.module1.chapter3_object_oriented_programming.shop.entity.*
 import com.solvd.course.module1.chapter3_object_oriented_programming.shop.service.impl.AccountServiceImpl
-//import com.solvd.course.module1.chapter3_object_oriented_programming.shop.entity.ExpressOrder
-//import com.solvd.course.module1.chapter3_object_oriented_programming.shop.entity.GiftOrder
 import com.solvd.course.module1.chapter3_object_oriented_programming.shop.service.impl.OnlineOrderService
 
 /**
@@ -13,10 +11,9 @@ import com.solvd.course.module1.chapter3_object_oriented_programming.shop.servic
  * Process the orders using the services.
  * Print all info: balances, order details, and show what happens if the user does not have enough money.
  */
-
 fun main() {
     val address = Address("123 Main St", "Springfield", "12345", "Disnayland")
-    val account = BankAccount(200.0)
+    val account = BankAccount(25.0)
     val user = User(1, "Tom", "tom@email.com", "+1234567890", address, account)
 
     val p1 = Product(1, "laptop", 120.0)
@@ -32,6 +29,7 @@ fun main() {
     val orderService = OnlineOrderService(accountService)
 
     val order = Order(101, user, cart.getProducts(), address)
+    val giftOrder = GiftOrder(103, user, listOf(p2, p3), address, 10.0, "Hello <3")
 
     order.displayInfo()
     order.track()
@@ -41,5 +39,14 @@ fun main() {
     user.showBalance()
     println("-----------------------")
     orderService.cancelOrder(order)
+    user.showBalance()
+    println("-----------------------")
+    println("GIFT ORDER")
+
+    giftOrder.displayInfo()
+    giftOrder.track()
+    orderService.processOrder(giftOrder)
+    giftOrder.track()
+
     user.showBalance()
 }

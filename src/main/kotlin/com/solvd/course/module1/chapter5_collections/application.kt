@@ -1,23 +1,20 @@
 package com.solvd.course.module1.chapter5_collections
 
 fun main() {
-    val numbers = listOf(1, 2, 3, 4) //List<Int> // immutable
-    val people = listOf("Tom", "Sam", "Bob", "Alice") //List<String>
+    val people = setOf("Tom", "Sam", "Bob", "Alice")
+    val employee = listOf("Tom", "Sam", "Kate", "Mike")
 
-    val section = people[1]
-    //println(section)
+    val all = people union employee
+    val common = people intersect employee
+    val different = employee subtract people
 
-    val subPeople = people.subList(1, 3)
-    //println(subPeople)
+    println(all)
+    println(common)
+    println(different)
 
-    val numbers2 = mutableListOf(1, 2, 3, 3, 2, 3)
-    println(numbers2)
-    //numbers2.add(1)
-    //numbers2.add(0, 100)
-    numbers2.remove(3)
 
-    println(numbers2)
 
-    val a: Iterable<Int>
-    val b: MutableIterable<Int>
+    val numbers1: HashSet<Int> = hashSetOf(5, 6, 7) //O(1)
+    val numbers2: LinkedHashSet<Int> = linkedSetOf(1, 2, 3) //O(1)
+    val numbers3: MutableSet<Int> = mutableSetOf(1, 2, 3) //O(log(n))
 }

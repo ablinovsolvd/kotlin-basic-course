@@ -1,5 +1,7 @@
 package com.solvd.course.module1.chapter5_collections
 
+import com.solvd.course.module1.chapter5_collections.util.MathUtils
+
 fun main() {
     val mathUtils = MathUtils()
     val numbers = listOf(1, 2, 3 ,4, 5, 6)

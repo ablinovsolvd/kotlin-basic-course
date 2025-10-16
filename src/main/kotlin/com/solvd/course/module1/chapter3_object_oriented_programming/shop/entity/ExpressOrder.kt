@@ -1,6 +1,7 @@
 package com.solvd.course.module1.chapter3_object_oriented_programming.shop.entity
 
 import com.solvd.course.module1.chapter3_object_oriented_programming.shop.entity.status.OrderStatus
+import java.math.BigDecimal
 
 /**
  * Make a class ExpressOrder (inherits Order) with:

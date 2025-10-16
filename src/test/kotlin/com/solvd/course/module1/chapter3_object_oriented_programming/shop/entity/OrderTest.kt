@@ -30,4 +30,50 @@ class OrderTest {
         assertEquals(12.0, order.totalAmount())
         assertEquals(OrderStatus.PENDING, order.getStatus())
     }
+
+    /** Test that express order total includes the extra fee */
+    @Test
+    fun testExpressOrderTotalIncludesExtraFee() {
+        val user = makeUser()
+        val products = products()
+        val expressFee = 5.99
+        val expressOrder = ExpressOrder(1, user, products, user.address, expressFee)
+        assertEquals(17.99, expressOrder.totalAmount(), 0.01)
+    }
+
+    /** Test that displayInfo for gift order includes the gift message */
+    @Test
+    fun testGiftOrderDisplayIncludesMessage() {
+        val user = makeUser()
+        val products = products()
+        val expressFee = 5.99
+        val giftMessage = "Happy Birthday"
+        val giftOrder = GiftOrder(1, user, products, user.address, expressFee, giftMessage)
+
+        //TODO check captureOutput()
+        giftOrder.displayInfo()
+
+
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

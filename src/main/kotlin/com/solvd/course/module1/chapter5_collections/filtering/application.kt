@@ -1,5 +1,10 @@
 package com.solvd.course.module1.chapter5_collections.filtering
 
+import com.solvd.course.module1.chapter3_object_oriented_programming.abstrct.entity.Figure
+import com.solvd.course.module1.chapter3_object_oriented_programming.abstrct.entity.impl.Circle
+import com.solvd.course.module1.chapter3_object_oriented_programming.abstrct.entity.impl.Rectangle
+import com.solvd.course.module2.entity.Square
+
 fun main() {
     //filter()
     var people = listOf("Tom", "Sam", "Mike", "Bob", "Alice")
@@ -30,6 +35,12 @@ fun main() {
     println(cars)
     val filteredCars = cars.filterNotNull()
     println(filteredCars)
+
+    val square = Circle("Circle", 2F)
+    val rectangle = Rectangle("Rectangle", 1F, 2F)
+    val figures: List<Any> = listOf(square, rectangle, "NotFigure", 123)
+    val filteredFigures = figures.filterIsInstance<String>()
+    println(filteredFigures)
 }
 
 open class Person(val name: String,
@@ -40,3 +51,12 @@ open class Person(val name: String,
 }
 
 class Student(name: String, age: Int): Person(name, age)
+
+
+
+
+
+
+
+
+

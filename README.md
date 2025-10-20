@@ -29,7 +29,7 @@ Start here if you're new to Kotlin or programming tools:
 ### Chapter 1: Basics
 
 Build your foundation in Kotlin programming!  
-**Theory Units:**
+**Theory & Practice Units:**
 - **unit1-program-structure.md** — Structure and syntax of a Kotlin program.
 - **unit2-data-types.md** — Basic data types: Int, String, Boolean, etc.
 - **unit3-console.md** — Input and output in the console.
@@ -47,7 +47,7 @@ Practice exercises included for each unit.
 
 Learn to write clean, flexible, and reusable code using functions — a key skill for every developer.
 
-**Theory Units:**
+**Theory & Practice Units:**
 - **unit1-functions-and-parameters.md** — Declaring and using functions, and passing data with parameters.
 - **unit2-vararg-parameters.md** — Functions that accept a variable number of arguments.
 - **unit3-returning-results.md** — How functions return values and what `Unit` means.
@@ -69,7 +69,7 @@ Master classes, objects, and OOP design patterns!
 **Introduction:**
 - General overview, key concepts, and OOP principles.
 
-**Practice Units:**
+**Theory & Practice Units:**
 - **unit0-what-is-oop.md** — What is OOP? Basic ideas and principles.
 - **unit1-classes-and-objects.md** — How to create classes and objects.
 - **unit2-constructors.md** — Using constructors for initialization.
@@ -89,16 +89,22 @@ Master classes, objects, and OOP design patterns!
 
 Explore Kotlin's powerful collection types and their usage.
 
-**Practice Units:**
-- **intro.md** — Collections overview and introduction.
-- **practice-unit1-3.md** — Basic practice on lists, sets, and maps.
-- **practice-unit1-3-solutions.md** — Solutions and explanations.
-- **unit0-collections-intro.md** — Introduction to collections.
-- **unit1-list.md** — Everything about lists.
-- **unit2-set.md** — Working with sets.
-- **unit3-map.md** — Using maps for key-value storage.
-- **unit4-sequence.md** — Sequences for lazy evaluation.
-- **unit5-array.md** — Arrays in Kotlin.
+**Theory & Practice Units:**
+- **unit0-collections-intro.md** — Introduction to collections. What are collections, their types, and how they are used in Kotlin.
+- **unit1-list.md** — Everything about lists. How to create, use, and work with lists for ordered groups of elements.
+- **unit2-set.md** — Working with sets. Create sets, ensure uniqueness, and perform set operations.
+- **unit3-map.md** — Using maps for key-value storage. Store pairs of keys and values and access data efficiently.
+- **unit4-sequence.md** — Sequences for lazy evaluation. Use sequences to process data efficiently and lazily.
+- **unit5-array.md** — Arrays in Kotlin. Fixed-size collections, creating arrays, accessing and updating elements.
+- **unit6-filtering-collections.md** — How to filter elements in collections using predicates and filter functions.
+- **unit7-checking-elements.md** — How to check for the presence, emptiness, or conditions of elements in collections.
+- **unit8-transformations.md** — How to transform and map the contents of collections into new forms.
+- **unit9-grouping.md** — How to group elements in collections. Organize collection elements by keys or criteria.
+- **unit10-sorting.md** — Sorting collections. Sort elements in collections by value, custom comparator, or properties.
+- **unit11-aggregate-operations.md** — Aggregate operations on collections. Calculate sums, averages, min/max, and other aggregations.
+- **unit12-add-subtract-union.md** — Adding, subtracting, and uniting collections. Combine, subtract, and merge different collections.
+- **unit13-get-part-of-elements.md** — Getting part of elements from collections. Extract sublists, slices, or ranges of elements.
+- **unit14-get-individual-elements.md** — Getting individual elements from collections. Access by index, find by condition, or retrieve specific items.
 
 ---
 
@@ -108,9 +114,15 @@ Explore Kotlin's powerful collection types and their usage.
 
 Learn to write and run tests to keep your code safe!
 
-**Practice Units:**
-- **oop-task-shopping-system-junit.md** — Practical OOP project with JUnit tests.
-- **unit0-junit-testing-introduction.md** — Introduction to JUnit testing in Kotlin.
+**Theory & Practice Units:**
+- **unit0-junit-testing-introduction.md** — Introduction to unit testing and the JUnit framework. Learn why testing is important and how it fits into Kotlin development.
+- **unit1-writing-basic-tests.md** — Writing simple test functions, basic assertions, and how to organize your first tests.
+- **unit2-test-lifecycle-setup.md** — Understanding the test lifecycle. Learn about setup and teardown methods like `@BeforeEach` and `@AfterEach` to prepare and clean up test environments.
+- **unit3-testing-exceptions.md** — How to test for exceptions using tools like `assertThrows`. Make sure your code handles errors as expected.
+- **unit4-parameterized-tests.md** — Running tests with different sets of data using parameterized tests, making your test code more powerful and reusable.
+- **unit5-test-coverage-best-practices.md** — What is test coverage? Best practices for writing effective and meaningful tests, naming conventions, and keeping your codebase healthy.
+
+Practice exercises and example code are included in each unit to help you master the basics of testing in Kotlin with JUnit.
 
 ---
 

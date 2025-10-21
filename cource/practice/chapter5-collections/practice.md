@@ -153,7 +153,3 @@ Write a function that returns the element at a given index from a list, or "Not 
 
 ### 2. Get Random Element
 Create a function that returns a random element from a list, or null if the list is empty.
-
----
-
-© 2025 Artyom Blinou ([Facebook](https://facebook.com/endofholiday) | [Instagram](https://instagram.com/endofholiday)). All rights reserved.

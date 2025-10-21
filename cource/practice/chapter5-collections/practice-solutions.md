@@ -421,7 +421,3 @@ fun getRandomElement(list: List<String>): String? {
 ```
 **Explanation:**  
 `randomOrNull()` returns a random element or `null` if the list is empty.
-
----
-
-© 2025 Artyom Blinou ([Facebook](https://facebook.com/endofholiday) | [Instagram](https://instagram.com/endofholiday)). All rights reserved.

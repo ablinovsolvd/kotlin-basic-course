@@ -1,4 +1,5 @@
 # Kotlin Basic Course Theory
+
 ---
 
 ## About This Course
@@ -103,7 +104,7 @@ Explore Kotlin's powerful collection types and their usage.
 - **unit10-sorting.md** — Sorting collections. Sort elements in collections by value, custom comparator, or properties.
 - **unit11-aggregate-operations.md** — Aggregate operations on collections. Calculate sums, averages, min/max, and other aggregations.
 - **unit12-add-subtract-union.md** — Adding, subtracting, and uniting collections. Combine, subtract, and merge different collections.
-- **unit13-get-part-of-elements.md** — Getting part of elements from collections. Extract sublists, slices, or ranges of elements.
+- **unit13-get-part.md** — Getting part of elements from collections. Extract sublists, slices, or ranges of elements.
 - **unit14-get-individual-elements.md** — Getting individual elements from collections. Access by index, find by condition, or retrieve specific items.
 
 ---
@@ -111,8 +112,6 @@ Explore Kotlin's powerful collection types and their usage.
 ## Module 2: Advanced Topics
 
 ### Chapter 1: Unit Testing
-
-Learn to write and run tests to keep your code safe!
 
 **Theory & Practice Units:**
 - **unit0-junit-testing-introduction.md** — Introduction to unit testing and the JUnit framework. Learn why testing is important and how it fits into Kotlin development.
@@ -122,7 +121,52 @@ Learn to write and run tests to keep your code safe!
 - **unit4-parameterized-tests.md** — Running tests with different sets of data using parameterized tests, making your test code more powerful and reusable.
 - **unit5-test-coverage-best-practices.md** — What is test coverage? Best practices for writing effective and meaningful tests, naming conventions, and keeping your codebase healthy.
 
-Practice exercises and example code are included in each unit to help you master the basics of testing in Kotlin with JUnit.
+---
+
+### Chapter 2: UI Testing
+
+Master real-world UI automation using Selenium, Carina, Zebrunner, Kotlin, and more!
+
+**Theory & Practice Units:**
+- **unit0-ui-testing-introduction.md** — Introduction to UI testing: goals, process, and ecosystem.
+- **unit1-ui-testing-tools-and-technology-stack.md** — UI test tools and technology stack overview. Why we use Selenium, Carina, Zebrunner, etc.
+- **unit2-locators-selenium-carina.md** — How to find and work with page elements in Selenium and Carina (locator strategies, best practices).
+- **unit3-page-object-pattern.md** — Page Object Pattern: organizing your page classes for maintainable UI test code.
+- **unit4-page-object-pattern-constants.md** — Managing constants and config values within your Page Object implementations.
+- **unit5-test-suites.md** — Using test suites: how to organize, run, and scale your UI tests in large projects.
+
+---
+
+### Chapter 3: Mobile Testing
+
+_Coming soon!_
+
+---
+
+### Chapter 4: API Testing
+
+_Coming soon!_
+
+---
+
+## Module 3: Database
+
+_Coming soon!_
+
+---
+
+## Module 4: Spring
+
+_Coming soon!_
+
+---
+
+## Interview Preparation
+
+Sharpen your skills and get ready for real-world interviews!
+
+- **interview-coding-tasks-manual.md** — Manual with coding tasks for interviews.
+- **interview-guide-kotlin-java-qa.md** — Kotlin/Java QA interview guide.
 
 ---
 
@@ -132,13 +176,6 @@ Practice exercises and example code are included in each unit to help you master
 - **Read the introductions:** Each chapter has an intro to guide your learning.
 - **Practice:** Use the practice folders to try out what you learn.
 - **Come back anytime:** This course is a living resource — new chapters and updates will be added!
-
----
-
-## Let’s Get Started!
-
-Kotlin is a modern, fun, and powerful language.  
-Take your time, experiment with code, and enjoy learning!
 
 ---
 
